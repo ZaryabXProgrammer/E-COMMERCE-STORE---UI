@@ -216,7 +216,9 @@ const Navbar = () => {
 
                 </Left>
 
-                <Center><Logo onClick={() => navigate('/')}>LAMA.</Logo></Center>
+                <Center>
+                    <Logo onClick={() => navigate('/')}>LAMA.</Logo>
+                </Center>
 
                 <Right>
                     {/* {currentUser && <><h3>@{currentUser.username}</h3></>} */}

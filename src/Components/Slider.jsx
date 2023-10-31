@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { sliderItems } from '../data'
 import { mobile } from '../Responsive'
 import { useNavigate } from "react-router-dom";
