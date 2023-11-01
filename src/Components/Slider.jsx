@@ -81,7 +81,15 @@ const Button = styled.button`
     padding: 10px;
     font-size: 20px;
     background-color: transparent;
+    font-weight: bold;
 cursor: pointer;
+transition: 0.3s ease;
+ &:hover {
+    background-color: teal;
+    color: white;
+    
+  
+  }
 `
 
 //if taking function paramter then used anonymouse arrow function isnide onclick event
@@ -134,6 +142,7 @@ const Slider = () => {
                         <ImgContainer>
                             <Image src={item.img} />
                         </ImgContainer>
+
                         <InfoContainer>
 
                             <Title>{item.title}</Title>

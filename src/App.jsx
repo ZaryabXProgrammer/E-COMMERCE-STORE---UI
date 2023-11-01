@@ -7,7 +7,7 @@ import Cart from "./Pages/Cart"
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Success from "./Pages/Success"
-import Products from "./Components/Products"
+// import Products from "./Components/Products"
 // import { useSelector } from "react-redux"
 
 
@@ -17,8 +17,6 @@ const App = () => {
 
   // const currentUser = useSelector(state => state.user.currentUser.username)
   // // console.log(currentUser)
-
-  
 
   return (
     <div>

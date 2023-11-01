@@ -25,9 +25,9 @@ const Container = styled.div`
   min-width: 280px;
   height: 350px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #d1f2fd5a;
+align-items: center;
+justify-content: center;
+  background-color: #d1f2fd8f;
   position: relative;
 
   &:hover ${Info}{
@@ -40,7 +40,7 @@ const Circle = styled.div`
   height: 220px;
   border-radius: 50%;
   background-color: white;
-  position: absolute;
+  position:absolute
 `;
 
 const Image = styled.img`
@@ -71,6 +71,7 @@ const Product = ({ item }) => {
 
       <Circle />
       <Image src={item.img} />
+
       <Info>
 
         <Icon>

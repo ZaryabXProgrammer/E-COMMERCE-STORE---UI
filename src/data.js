@@ -1,26 +1,28 @@
 export const sliderItems = [
-    {
-      id: 1,
-      img: "https://img.freepik.com/free-photo/attractive-teenager-pointing-side_1187-1380.jpg?w=740&t=st=1696877588~exp=1696878188~hmac=d4e5528c17e6159bfcccf6dfe5dbe54a072103516527c7a964e5b56a28a7080d",
-      title: "SUMMER SALE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "f5fafd",
-    },
-    {
-      id: 2,
-      img: "https://i.ibb.co/DG69bQ4/2.png",
-      title: "AUTUMN COLLECTION",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fcf1ed",
-    },
-    {
-      id: 3,
-      img: "https://i.ibb.co/cXFnLLV/3.png",
-      title: "LOUNGEWEAR LOVE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "f5fafd",
-    },
-  ];
+  {
+    id: 1,
+    img: "https://img.freepik.com/free-photo/attractive-teenager-pointing-side_1187-1380.jpg?w=740&t=st=1696877588~exp=1696878188~hmac=d4e5528c17e6159bfcccf6dfe5dbe54a072103516527c7a964e5b56a28a7080d",
+    title: "SUMMER SALE",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    bg: "f5fafd",
+  },
+  {
+    id: 2,
+    img: "https://i.ibb.co/ZcrgghC/pngwing-com-13.png",
+    title: "AUTUMN COLLECTION",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    bg: "fcf1ed",
+  },
+  {
+    id: 3,
+    img: "https://i.ibb.co/C5Tn27t/clean-latin-fresh-natural-one.jpg",
+    title: "LOUNGEWEAR LOVE",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    bg: "f5fafd",
+  },
+
+  //<a href="https://www.freepik.com/free-photo/elegant-young-handsome-man_1232146.htm#query=men%20clothes%20png&position=15&from_view=keyword&track=ais">Image by nensuria</a> on Freepik
+];
 
   export const categories = [
     {
@@ -39,7 +41,7 @@ export const sliderItems = [
       id: 3,
       img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       title: "LIGHT JACKETS",
-       cat: "jeans"
+      cat: "jeans"
     },
   ];
 
