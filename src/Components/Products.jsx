@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const Products = ({ cat, filters, sort }) => {
-  
+
   const [products, setproducts] = useState([]);
 
   const [filteredProducts, setfilteredProducts] = useState([]);
@@ -48,10 +48,20 @@ const Products = ({ cat, filters, sort }) => {
         products.filter((item) =>
           Object.entries(filters).every(([key, value]) => {
             return item[key].includes(value);
+            // Object.entries(filters) converts the filters object into an array of key-value pairs. In this example, it would look like: //
+            //             ```
+            // [  ["color", "Red"],
+            //   ["size", "M"],   --> filters array had objects conmverted to key value pair from object.entries
+            //  -->you can access properties of an object using bracket notation, like item['color'], if
+            // ]
+            // ```
           })
         )
       );
+
     }
+
+
   }, [cat, filters, products]);
 
   // The 'useEffect' dependencies list specifies that the effect should re-run whenever 'cat', 'filters', or 'products' change.
@@ -64,13 +74,14 @@ const Products = ({ cat, filters, sort }) => {
       setfilteredProducts(
         (prev) => [...prev].sort((a, b) => a.createdAt - b.createdAt))
 
+
     } else if (sort === 'asc') {
       setfilteredProducts((prev) => [...prev].sort((a, b) => a.price - b.price)
-)
-     
-    } else {
-      setfilteredProducts((prev)=>[...prev].sort((a,b)=>b.price - a.price))
-   
+      )
+
+    } else if (sort === 'desc') {
+      setfilteredProducts((prev) => [...prev].sort((a, b) => b.price - a.price))
+
     }
 
   }, [sort])
@@ -78,7 +89,7 @@ const Products = ({ cat, filters, sort }) => {
   //checking on which route we are, if we are on products route
   const location = useLocation();
 
-  const baseUrl = location.pathname ==='/products'
+  const baseUrl = location.pathname === '/products'
 
 
   return (

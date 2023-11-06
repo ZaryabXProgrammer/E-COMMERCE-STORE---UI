@@ -75,6 +75,7 @@ const FilterSize = styled.select`
   padding: 5px;
 `;
 const FilterSizeOption = styled.option``;
+
 const AddContainer = styled.div`
   width: 50%;
   display: flex;
@@ -111,15 +112,15 @@ const Button = styled.button`
 `;
 
 const Product = () => {
-    const location = useLocation(); //we will use this to retrieve the id paramter from the url by splitting url and then taking second index
+  const location = useLocation(); //we will use this to retrieve the id paramter from the url by splitting url and then taking second index
 
-    const id = location.pathname.split("/")[2];
+  const id = location.pathname.split("/")[2];
 
-    const [product, setproduct] = useState({}); //coming from api
+  const [product, setproduct] = useState({}); //coming from api
 
-    const [quantity, setquantity] = useState(1); //set counter
+  const [quantity, setquantity] = useState(1); //set counter
 
-    const [color, setcolor] = useState(null); //choose particualr color from color array
+  const [color, setcolor] = useState(null); //choose particualr color from color array
 
   // const [initialSize, setinitialSize] = useState(null);
 
@@ -141,29 +142,29 @@ const Product = () => {
 
     getProduct();
   }, [id]);
-    
+
 
   // useEffect(() => {
   //   setsize(initialSize)
-  
-   
+
+
   // }, [initialSize])
-  
-    //using useSelector for default values and dispath for action update
 
-    const dispatch = useDispatch()
-    
-    const addToCart = () => {
+  //using useSelector for default values and dispath for action update
 
-        // const price = product.price * quantity
+  const dispatch = useDispatch()
 
-        dispatch(
-            addProduct({ ...product, quantity, color, size })
-        )
-        //we sending all the product items but setting the quanity color and size which we have selected, means updating existing data
+  const addToCart = () => {
 
-        //after es6 js we can do product directly instead of product: product if the parent and child have same key names
-    }
+    // const price = product.price * quantity
+
+    dispatch(
+      addProduct({ ...product, quantity, color, size })
+    )
+    //we sending all the product items but setting the quanity color and size which we have selected, means updating existing data
+
+    //after es6 js we can do product directly instead of product: product if the parent and child have same key names
+  }
 
   return (
     <Container>
@@ -181,6 +182,7 @@ const Product = () => {
           <Price>$ {product.price}</Price>
 
           <FilterContainer>
+            
             <Filter>
               <FilterTitle>Color</FilterTitle>
               {product.color?.map((c) => (
@@ -199,22 +201,22 @@ const Product = () => {
                             <FilterColor color='gray' /> */}
             </Filter>
 
-                      <Filter>
-                          
-              <FilterTitle>Size</FilterTitle>
-                         
-                        <FilterSize onChange={(e) => setsize(e.target.value)}>
-                              
-                              {product.size?.map((size) => (
-                  
-                                  <FilterSizeOption key={size} value={size}>{size}</FilterSizeOption>
+            <Filter>
 
-                              ))}
-                              
-                          </FilterSize>
-                          
-                      </Filter>
-                      
+              <FilterTitle>Size</FilterTitle>
+
+              <FilterSize onChange={(e) => setsize(e.target.value)}>
+
+                {product.size?.map((size) => (
+
+                  <FilterSizeOption key={size} value={size}>{size}</FilterSizeOption>
+
+                ))}
+
+              </FilterSize>
+
+            </Filter>
+
           </FilterContainer>
 
           <AddContainer>
@@ -228,13 +230,14 @@ const Product = () => {
               <Amount>{quantity}</Amount>
 
               <AddIcon onClick={() => setquantity((prev) => prev + 1)} />
+              
             </AmountContainer>
 
-                      <Button onClick={addToCart} >
-                          
+            <Button onClick={addToCart} >
+
               Add To Cart
               {/* <FilterColor color={color} /> */}
-                     </Button>
+            </Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>

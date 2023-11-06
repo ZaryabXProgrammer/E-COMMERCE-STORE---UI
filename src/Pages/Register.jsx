@@ -56,6 +56,13 @@ const Button = styled.button`
     background-color: teal;
     color: white;
     cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover{
+        background-color: white;
+        color: teal;
+        border: 1px solid teal;
+        font-weight: bold;
+    }
 `
 
 
@@ -78,13 +85,13 @@ const Register = () => {
     })
       
 
-const navigate = useNavigate()
+    const navigate = useNavigate()
+    
     const onSubmit = async (data) => {
     
             try {
                 
                 await publicRequest.post('auth/register', data).then((res) => {
-                    console.log(res.data)
                     alert(res.data.username + ' Registered')
                     navigate('/')
                 })

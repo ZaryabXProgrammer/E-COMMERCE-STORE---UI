@@ -65,6 +65,7 @@ const Product = styled.div`
 const ProductDetail = styled.div`
   flex: 2;
   display: flex;
+ 
 `;
 const Image = styled.img`
   width: 200px;
@@ -89,6 +90,7 @@ const PriceDetail = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
+
   flex-direction: column;
 
   ${mobile({
@@ -245,6 +247,7 @@ const Cart = () => {
         <Title>Your Bag</Title>
 
         <Top>
+
           <TopButton onClick={handleBack}>Continue Shopping </TopButton>
 
 
@@ -269,9 +272,12 @@ const Cart = () => {
         </Top>
 
         <Bottom>
+
           <Info>
             {products.map((item) => (
+              
               <Product key={item._id}>
+                
                 <ProductDetail>
                   <Image src={item.img} />
 
@@ -348,6 +354,7 @@ const Cart = () => {
               <SummaryItemPrice>${total}</SummaryItemPrice>
 
             </SummaryItem>
+            
             {!currentUser ? (<p>Sign in to checkout</p>
             ) : ''}
 

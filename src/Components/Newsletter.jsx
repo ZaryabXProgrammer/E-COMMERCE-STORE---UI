@@ -22,7 +22,7 @@ const Description = styled.div`
     font-weight: 300;
     margin-bottom: 20px;
     
-${mobile({ textAlign: 'center'})}
+${mobile({ textAlign: 'center' })}
 
 `
 const InputContainer = styled.div`
@@ -39,12 +39,12 @@ const InputContainer = styled.div`
 
 const Input = styled.input`
    border: none;
-   flex: 8;
+   flex:8 ;
    padding-left: 20px;
      
 `
 const Button = styled.button`
-    flex: 1;
+    flex:1 ;
 border: none;
 background: teal;
 color: white;

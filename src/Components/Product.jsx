@@ -18,6 +18,12 @@ const Info = styled.div`
   transition: all 0.5s ease;
   cursor: pointer;
 `;
+const Image = styled.img`
+transform: scale(1);
+  height: 75%;
+  z-index: 2;
+  transition: all 0.4s ease;
+`;
 
 const Container = styled.div`
   flex: 1;
@@ -33,6 +39,9 @@ justify-content: center;
   &:hover ${Info}{
     opacity: 1;
   }
+  &:hover ${Image} {
+    transform: scale(1.1);
+  }
 `;
 
 const Circle = styled.div`
@@ -43,10 +52,7 @@ const Circle = styled.div`
   position:absolute
 `;
 
-const Image = styled.img`
-  height: 75%;
-  z-index: 2;
-`;
+
 
 const Icon = styled.div`
   width: 40px;

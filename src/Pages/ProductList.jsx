@@ -69,7 +69,7 @@ const ProductList = () => {
     // const cat = (location.pathname.split('/')[2])
 
     const cat = (location.pathname.split('/')[2])
- 
+
 
     //state for color and size filter 
     const [filters, setfilter] = useState([])
@@ -106,7 +106,9 @@ const ProductList = () => {
             </TopButton>
 
             <Title>{cat && cat.toUpperCase()}</Title>
-{cat &&  <FilterContainer>
+
+            {cat && 
+            <FilterContainer>
 
                 <Filter>
                     <FilterText>Filter Products: </FilterText>
@@ -154,9 +156,9 @@ const ProductList = () => {
                 </Filter>
 
             </FilterContainer>}
-           
 
-            <Products cat={cat} filters={filters} sort={sort}/>
+
+            <Products cat={cat} filters={filters} sort={sort} />
 
             <Newsletter />
             <Footer />
