@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   ${mobile({ padding: "6px" })}
 `;
 const Title = styled.h1`
-  font-weight: 300;
+  font-weight: 301;
   text-align: center;
 `;
 const Top = styled.div`
@@ -275,9 +275,9 @@ const Cart = () => {
 
           <Info>
             {products.map((item) => (
-              
+
               <Product key={item._id}>
-                
+
                 <ProductDetail>
                   <Image src={item.img} />
 
@@ -354,7 +354,7 @@ const Cart = () => {
               <SummaryItemPrice>${total}</SummaryItemPrice>
 
             </SummaryItem>
-            
+
             {!currentUser ? (<p>Sign in to checkout</p>
             ) : ''}
 
