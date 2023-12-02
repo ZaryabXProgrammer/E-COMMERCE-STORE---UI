@@ -71,7 +71,7 @@ const Image = styled.img`
   width: 200px;
 `;
 const Details = styled.div`
-  padding: 20px;
+  padding: 21px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -263,7 +263,7 @@ const Cart = () => {
           ) : (
             <>
 
-              <TopButton disabled>Checkout Now</TopButton></>
+              <TopButton disabled>Checkout Now </TopButton></>
           )}
 
 

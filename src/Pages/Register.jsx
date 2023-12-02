@@ -71,8 +71,8 @@ const Register = () => {
 
 
     const initialValues = {
-      
-       
+
+
         username: "",
         email: "",
         password: "",
@@ -83,25 +83,25 @@ const Register = () => {
         email: Yup.string().required(),
         password: Yup.string().min(4).max(16).required()
     })
-      
+
 
     const navigate = useNavigate()
-    
+
     const onSubmit = async (data) => {
-    
-            try {
-                
-                await publicRequest.post('auth/register', data).then((res) => {
-                    alert(res.data.username + ' Registered')
-                    navigate('/')
-                })
-                
 
-            } catch (error) {
-                console.log(error)
-            }
+        try {
 
-}
+            await publicRequest.post('auth/register', data).then((res) => {
+                alert(res.data.username + ' Registered')
+                navigate('/')
+            })
+
+
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
 
 
 
@@ -120,7 +120,7 @@ const Register = () => {
                     <Form>
 
                         <ErrorMessage name='username' component="span" style={{ color: 'red', marginTop: '11px' }} />
-                        
+
                         <Input name="username" placeholder='Username' />
 
                         <ErrorMessage name="password" component="span" style={{ color: 'red', marginTop: '11px' }} />
@@ -132,7 +132,7 @@ const Register = () => {
 
                         <Agreement>
                             By creating an account, I consent to the processing of my personal
-                            data in accordance with the <b>PRIVACY POLICY</b>
+                            data in accordance with the <b>PRIVACY POLICY.</b>
                         </Agreement>
                         <Button type="submit">CREATE</Button>
                     </Form>
