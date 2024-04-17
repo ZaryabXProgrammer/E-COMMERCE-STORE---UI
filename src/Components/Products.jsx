@@ -26,8 +26,8 @@ const Products = ({ cat, filters, sort }) => {
         //if there is category available in the params then it will detect and use it
         const res = await axios.get(
           cat
-            ? `http://localhost:3003/api/products?category=${cat}`
-            : "http://localhost:3003/api/products"
+            ? `https://e-commerce-store-api-backend.onrender.com/api/products?category=${cat}`
+            : "https://e-commerce-store-api-backend.onrender.com/api/products"
         );
 
         // setproducts(res.data)
